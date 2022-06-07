@@ -4,14 +4,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.Controller">
+<BorderPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" >
    <padding>
       <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
    </padding>
    <left>
-      <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ListView fx:id="listView"  prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" >
          <BorderPane.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
          </BorderPane.margin></ListView>
    </left>
    <center>
@@ -53,23 +53,23 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </GridPane.margin>
             </Label>
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="fldIme" GridPane.columnIndex="1" />
+            <TextField fx:id="fldPrezime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="fldEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="fldKorisnickoIme" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <PasswordField fx:id="fldLozinka" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
    </center>
    <bottom>
       <HBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefWidth="70.0" text="Dodaj">
+            <Button fx:id="btnDodaj" mnemonicParsing="false" onAction="#btnDodajClick" prefWidth="70.0" text="Dodaj">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefWidth="70.0" text="Kraj">
+            <Button fx:id="btnKraj" mnemonicParsing="false" onAction="#btnKrajClick" prefWidth="70.0" text="Kraj">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>
